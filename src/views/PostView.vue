@@ -4,7 +4,12 @@
     <div class="post">
       <img :src="post.image" :alt="post.title" />
       <h2>{{ post.title }}</h2>
-      <a :href="post.link" target="_blank" class="btn btn__big">Download</a>
+      <a v-if="post.link" :href="post.link" target="_blank" class="btn btn__big"
+        >Download</a
+      >
+      <a v-else :href="post.author?.link" target="_blank" class="btn btn__big"
+        >Download</a
+      >
       <p>{{ post.description }}</p>
     </div>
   </div>
