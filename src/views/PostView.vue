@@ -2,7 +2,7 @@
   <div class="post-container container">
     <app-aside />
     <div class="post">
-      <img :src="`\\${post.image}`" :alt="post.title" />
+      <img :src="`${post.image}`" :alt="post.title" />
       <h2>{{ post.title }}</h2>
       <a
         v-if="post.author && post.author.link"
